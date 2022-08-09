@@ -7,10 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MarkerService } from './shared/services/marker.service';
+import { MapComponent } from './modules/maps/map/map.component';
+import { PopupService } from './shared/services/popup.service';
+import { ShapeService } from './shared/services/shape.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +24,9 @@ import { MarkerService } from './shared/services/marker.service';
     HttpClientModule
   ],
   providers: [
-    MarkerService
+    MarkerService,
+    PopupService,
+    ShapeService
   ],
   bootstrap: [AppComponent]
 })
